@@ -15,6 +15,8 @@ void XXX(const char * const filename, const char * const line_number) {
     abort();
 }
 
-#define XXX XXX( XXX_STRINGIFY(__FILE__), XXX_STRINGIFY(__LINE__) );
+static inline void xxx_nop(void) { return; }
+
+#define XXX (void)(XXX( XXX_STRINGIFY(__FILE__), XXX_STRINGIFY(__LINE__) ), xxx_nop)
 
 #endif

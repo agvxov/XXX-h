@@ -3,6 +3,7 @@
 
 signed main(void) {
     XXX;
+    XXX();
 
     return 0;
 }
