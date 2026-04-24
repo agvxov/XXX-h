@@ -1,6 +1,10 @@
 #ifndef XXX_H
 #define XXX_H
 
+/* Todo:
+ * * warn variant
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 
