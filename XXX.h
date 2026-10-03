@@ -38,16 +38,13 @@ void XXX(const char * const filename, const char * const line_number) {
     xxx_printf(XXX, "Unimplemented at %s line %s.\n", filename, line_number);
     abort();
 }
-
 static inline void xxx_nop(void) { return; }
-
 #define XXX (void)(XXX(__FILE__, XXX_STRINGIFY(__LINE__) ), xxx_nop)
 
 static inline
 void warn(const char * const filename, const char * const line_number, const char * const message) {
     xxx_printf(warn, "Warning at %s line %s: %s.\n", filename, line_number, message);
 }
-
 #define warn(msg) warn(__FILE__, XXX_STRINGIFY(__LINE__), (msg))
 
 static inline
@@ -55,7 +52,6 @@ void die(const char * const filename, const char * const line_number, const char
     xxx_printf(die, "Died at %s line %s: %s.\n", filename, line_number, message);
     abort();
 }
-
 #define die(msg) die(__FILE__, XXX_STRINGIFY(__LINE__), (msg))
 
 #endif
